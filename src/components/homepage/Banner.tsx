@@ -4,7 +4,7 @@ import banner from '@/assets/banner.png';
 
 const Banner = () => {
   return (
-    <section className="max-w-7xl mx-auto my-12">
+    <section className="container mx-auto my-12 bg-[#15171D] rounded-3xl p-10">
       <div className="grid grid-cols-2 gap-4 items-center">
         <div className="space-y-6">
           <p className="text-[#C2F800]">WORKOUT LIBRARY</p>

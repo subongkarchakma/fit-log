@@ -4,7 +4,7 @@ import logo from "@/assets/logo.png";
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-base-100 shadow-sm rounded-lg">
+        <div className="navbar bg-base-100 shadow-sm container mx-auto rounded-lg">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

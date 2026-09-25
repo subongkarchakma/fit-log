@@ -1,13 +1,19 @@
+import { IWorkout } from '@/types/workType';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
 import { IoIosTimer } from 'react-icons/io';
 import { VscFlame } from 'react-icons/vsc';
 
-const WorkoutCard = ({workout}) => {
+interface IWorkoutCardProps {
+  workout: IWorkout;
+}
+
+const WorkoutCard = ({ workout }: IWorkoutCardProps) => {
     return (
-        <div
-              
+       <Link href={`/workouts/${workout.id}`}> 
+        <div             
               className="group overflow-hidden rounded-3xl bg-[#15171D] border border-[#222630] shadow-md hover:shadow-2xl transition-all duration-300"
             >
               {/* Image */}
@@ -77,14 +83,10 @@ const WorkoutCard = ({workout}) => {
                   </div>
                 </div>
                 
-
-
-                {/* Button */}
-                <button className="w-full mt-5 py-3 rounded-xl bg-[#C2F800] text-black font-semibold hover:bg-orange-500 transition-colors">
-                  View Workout
-                </button>
               </div>
             </div>
+       </Link>
+       
     );
 };
 

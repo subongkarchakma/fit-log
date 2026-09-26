@@ -1,15 +1,16 @@
 "use client";
 import Image from 'next/image';
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from "@/assets/logo.png";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { WorkoutsContext } from '@/context/WorkoutsContext';
 
 const Navbar = () => {
   const pathname = usePathname();
+  const { addPlan, savedPlan} = useContext(WorkoutsContext);
 
   const navLinks = [
-    { name: "Home", href: "/" },
     { name: "Workouts", href: "/workouts" },
     { name: "My Plan", href: "/my-plan" },
   ];
@@ -86,8 +87,8 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end flex gap-2">
-        <button className="btn">Plan</button>
-        <button className="btn">Save</button>
+        <button className="btn">Plan <span className="badge bg-[#C2F10D] text-black rounded-full">{addPlan.length}</span> </button>
+        <button className="btn">Save <span className="border-2 px-1.5 rounded-full">{savedPlan.length}</span></button>
       </div>
     </div>
     );

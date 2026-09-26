@@ -1,4 +1,4 @@
-# Project name : FitLog – Your Personal Workout Companion,
+# Project name : FitLog – Your Personal Workout Companion
 
 # Description  :
 ### Track your workouts. Build consistency. Get stronger.

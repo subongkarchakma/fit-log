@@ -97,9 +97,12 @@ const totalExercises = addPlan.length;
               <p className=" text-gray-500">
                 Browse the library and add add a lift to get today moving!
               </p>
-              <button className="btn py-2 px-5 text-black rounded-2xl bg-[#C2F10D] mt-4">
-                Go to Workouts
-              </button>
+
+              <Link href="/workouts">
+                <button className="btn py-2 px-5 text-black rounded-2xl bg-[#C2F10D] mt-4">
+                  Go to Workouts
+                </button>
+              </Link>
             </div>
           ) : (
             savedPlan.map((workout: IWorkout) => {

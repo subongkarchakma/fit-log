@@ -2,7 +2,7 @@
 import { WorkoutsContext } from '@/context/WorkoutsContext';
 import { IWorkout } from '@/types/workType';
 import React, { useContext } from 'react';
-import { FaRegCalendarAlt } from 'react-icons/fa';
+import { TbBadgeFilled } from 'react-icons/tb';
 import { toast } from 'react-toastify';
 
 const SavedPlanButton = ({ workout }: { workout: IWorkout }) => {
@@ -21,15 +21,15 @@ const SavedPlanButton = ({ workout }: { workout: IWorkout }) => {
   return (
     <div>
       <button
-        className="bg-[#C2F800] text-black px-4 py-2 rounded-xl flex gap-2"
+        className=" text-white border px-4 py-2 rounded-xl flex gap-2"
         onClick={handleSavedPlan}
       >
         {isAdded ? (
           'Added'
         ) : (
           <>
-            <span className="pt-1">
-              <FaRegCalendarAlt />
+            <span className="pt-1 text-xl">
+              <TbBadgeFilled />
             </span>
             Add to saved plan
           </>

@@ -87,8 +87,13 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end flex gap-2">
-        <button className="btn">Plan <span className="badge bg-[#C2F10D] text-black rounded-full">{addPlan.length}</span> </button>
-        <button className="btn">Save <span className="border-2 px-1.5 rounded-full">{savedPlan.length}</span></button>
+        <Link href="/my-plan">
+          <button className="btn">Plan <span className="badge bg-[#C2F10D] text-black rounded-full">{addPlan.length}</span> </button>
+        </Link>
+
+        <Link href="/my-plan">
+          <button className="btn">Save <span className="border-2 px-1.5 rounded-full">{savedPlan.length}</span></button>
+        </Link>
       </div>
     </div>
     );
